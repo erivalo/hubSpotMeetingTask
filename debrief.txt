@@ -1,0 +1,9 @@
+- To improve readability, I would modularize the code, use constants instead of magic numbers, and set up the project with code formatting tools like prettier.
+- The logging should be improved to have a format in common at least.
+- Some error that I could catch was related to the date filter for the search, the operators should be changed, and the range date does not match with the inserted data.
+- In order to improve the performance I would reuse some common data in all the processors, contacts, companies, etc.
+- It seems that all processor methods can run independently so I would run them in a Promise.all methods, or if possible in different workers.
+- Another way to improve would be if a contact id is unique we can store it in a dictionary so we do not have to retrieve the data from the API.
+- Each processing method has a common behavior so we can use a common interface to execute the processing.
+- The exponential backoff method can be improved by extracting it to a utils method.
+- I could not find the API method to get the contacts that attended the meeting, since the associated contacts are associated with a meeting however we do not know if they attended the meeting.
